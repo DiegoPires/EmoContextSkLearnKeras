@@ -1,12 +1,12 @@
 # Introduction - Emo Context
 This work was proposed in the course "Techniques et applications du traitement de la langue naturelle" (IFT-7022) given on the Université Laval on Fall/2018.
 
-EmoContext it's a competition proposed to analyse and detecte emotions on conversations. Move details about it can be seen [here](https://www.humanizing-ai.com/emocontext.html) 
+EmoContext it's a competition proposed to analyse and detecte emotions on conversations. More details about the competition can be seen [here](https://www.humanizing-ai.com/emocontext.html) 
 
 ## About the project
 This project proposes to test the efficiency of both SkLearn and Keras to make the prediction for the competition.
 
-Multiple classifiers are created, but with multiple combination of features to evaluate the better one using the training data.
+Multiple classifiers are created, but using multiple combination of features to evaluate the better one using the training data.
 
 As soon as the best classifiers is find, the later is used to predict the emotions from the conversations of the competition.
 
@@ -15,7 +15,7 @@ Currently classifiers been tested: `MultinomialNB`, `LogisticRegression`, `SGDCl
 
 Currently features been used for vectorizing data: stop words, min and max frequencies, tf-idf, binary, ngram
 
-CUrrently extra-features implemented: Positive/Negative sentiment count, most present emojis count
+Currently extra-features implemented: Positive/Negative sentiment count, most present emojis count
 
 ### Keras
 All Keras are using `Sequential` model. Layers vary between 2 to 8. 
@@ -30,7 +30,7 @@ To setup the project, do the following on the terminal:
 
 - Create `virtualenv ./env`
 - Activate with `source ./env/bin/activate`
-- Install requirements `$ pip install -r requirements.txt`
+- Install requirements `pip install -r requirements.txt`
 
 ### VSCode
 
