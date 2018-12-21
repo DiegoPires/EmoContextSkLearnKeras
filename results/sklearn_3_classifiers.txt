@@ -1,0 +1,3 @@
+Classifier|stop_words|min_df|max_df|use_tfid|binary|ngram_range|emoji|sentiment|Accuracy
+LinearSVC |None|1|1.0|True|False|(1, 2)|True|True|0.84565649867374
+LinearSVC |None|1|1.0|True|True|(1, 2)|True|True|0.8504641909814323
