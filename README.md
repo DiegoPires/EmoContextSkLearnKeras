@@ -10,12 +10,12 @@ Multiple classifiers are created, but using multiple combination of features fro
 
 Also, for both classifiers there's 4 combinations of pre-treatment of the texts: separating phrases with special tag, replacing some internet slangs with proper english word, remove punctuation, apply lemmatisation, filtering by open words.
 
-|            | Phrase separation | Replace words | Remove punctuation | Apply lemmatization | Filter open words |
-|------------|-------------------|---------------|--------------------|---------------------|-------------------|
-|* DTO 1 *   | True              | False         | False              | False               | False             | 
-|* DTO 2 *   | False             | True          | True               | True                | True              | 
-|* DTO 3 *   | True              | True          | True               | False               | False             | 
-|* DTO 4 *   | False             | True          | True               | False               | False             | 
+|           | Phrase separation | Replace words | Remove punctuation | Apply lemmatization | Filter open words |
+|-----------|-------------------|---------------|--------------------|---------------------|-------------------|
+| *DTO 1*   | True              | False         | False              | False               | False             | 
+| *DTO 2*   | False             | True          | True               | True                | True              | 
+| *DTO 3*   | True              | True          | True               | False               | False             | 
+| *DTO 4*   | False             | True          | True               | False               | False             | 
 
 As soon as the best classifiers is find, the later is used to predict the emotions from the conversations of the competition.
 
@@ -37,18 +37,18 @@ Full results can be seen on the `\results` folder of this project.
 
 For SkLearn, here's the 10 best based on the training data
 
-| Classifier |stop_words | min_df | max_df | use_tfid | binary  | ngram_range | emoji   | sentiment | dto  | Accuracy      |
-|------------|-----------|--------|--------|----------|---------|-------------|---------|-----------|------|---------------|
-| LinearSVC  |	None	 | 1	  | 1	   | TRUE	  | TRUE	| (1, 2)  	  | TRUE	| TRUE	    | dto3 | *0.850464191* |	
-| LinearSVC  |	None	 | 1	  | 1	   | TRUE	  | TRUE	| (1, 2)	  | TRUE	| TRUE	    | dto4 | *0.849966844* |	
-| LinearSVC  |	None	 | 1	  | 1	   | TRUE	  | TRUE	| (1, 2)	  | TRUE	| TRUE	    | dto1 | *0.848972149* |	
-| LinearSVC  |	None	 | 1	  | 1	   | TRUE	  | FALSE	| (1, 2)	  | TRUE	| TRUE	    | dto3 | *0.845656499* |	
-| LinearSVC  |	None	 | 1	  | 1	   | TRUE	  | FALSE	| (1, 2)	  | TRUE	| TRUE	    | dto4 | *0.845324934* |	
-| LinearSVC  |	None	 | 1	  | 1	   | TRUE	  | FALSE	| (1, 2)	  | TRUE	| TRUE	    | dto1 | *0.844330239* |	
-| SGD        |	None	 | 1 	  | 1	   | TRUE	  | TRUE	| (1, 2)	  | TRUE	| TRUE	    | dto1 | *0.842175066* |	
-| SGD 	     |  None	 | 1	  | 1	   | FALSE	  | FALSE	| (1, 2)	  | TRUE	| TRUE	    | dto3 | *0.840351459* |	
-| SGD 	     |  None	 | 1	  | 1	   | FALSE	  | FALSE	| (1, 2)	  | TRUE	| TRUE	    | dto4 | *0.840185676* |	
-| SGD 	     |  None	 | 1	  | 1	   | TRUE	  | TRUE	| (1, 2)	  | TRUE	| TRUE	    | dto3 | *0.838527851* |	
+| Classifier |stop_words | min_f | max_f | use_tfid | binary  | ngram  | emoji | sentiment | dto  | Accuracy      |
+|------------|-----------|-------|-------|----------|---------|--------|-------|-----------|------|---------------|
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.850464191* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto4 | *0.849966844* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto1 | *0.848972149* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.845656499* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto4 | *0.845324934* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto1 | *0.844330239* |	
+| SGD        |	None	 | 1 	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto1 | *0.842175066* |	
+| SGD 	     |  None	 | 1	 | 1	 | FALSE  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.840351459* |	
+| SGD 	     |  None	 | 1	 | 1	 | FALSE  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto4 | *0.840185676* |	
+| SGD 	     |  None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.838527851* |	
 
 For Keras:
 
@@ -56,8 +56,8 @@ For Keras:
 |-----------------------------------|---------------|
 | word2vec_denser_dto4	            | *0.848972149* | 
 | word2vec_denser_dto1              | *0.848972149* | 
-| word2vec_dto1	                    | *0.84375    * | 
-| word2vec_dto4	                    | *0.84043435 * | 
+| word2vec_dto1	                    | *0.84375* | 
+| word2vec_dto4	                    | *0.84043435* | 
 | word2vec_dto2	                    | *0.839273873* | 
 | word2vec_denser_dto2	            | *0.838113395* | 
 | word2vec_dto3	                    | *0.826342838* | 
