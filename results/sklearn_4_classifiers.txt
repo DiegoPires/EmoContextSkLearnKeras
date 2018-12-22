@@ -1,3 +1,139 @@
 Classifier|stop_words|min_df|max_df|use_tfid|binary|ngram_range|emoji|sentiment|Accuracy
+MultinomialNB|None|1|1.0|False|False|(1, 1)|False|False|0.7402188328912467
+MultinomialNB|None|0.05|0.5|False|False|(1, 1)|False|False|0.5147546419098143
+MultinomialNB|None|0.05|0.7|False|False|(1, 1)|False|False|0.5179045092838196
+MultinomialNB|None|0.1|0.8|False|False|(1, 1)|False|False|0.5125994694960212
+MultinomialNB|None|1|1.0|True|False|(1, 1)|False|False|0.6158819628647215
+MultinomialNB|None|1|1.0|True|True|(1, 1)|False|False|0.6150530503978779
+MultinomialNB|english|1|1.0|False|False|(1, 1)|False|False|0.7307692307692307
+MultinomialNB|english|0.05|0.5|False|False|(1, 1)|False|False|0.4930371352785146
+MultinomialNB|english|0.05|0.7|False|False|(1, 1)|False|False|0.4930371352785146
+MultinomialNB|english|1|1.0|True|False|(1, 1)|False|False|0.6452254641909815
+MultinomialNB|english|1|1.0|True|True|(1, 1)|False|False|0.6452254641909815
+MultinomialNB|None|1|1.0|False|False|(1, 2)|False|False|0.7352453580901857
+MultinomialNB|None|0.05|0.5|False|False|(1, 2)|False|False|0.5179045092838196
+MultinomialNB|None|0.05|0.7|False|False|(1, 2)|False|False|0.5197281167108754
+MultinomialNB|None|0.1|0.8|False|False|(1, 2)|False|False|0.5122679045092838
+MultinomialNB|None|1|1.0|True|False|(1, 2)|False|False|0.5828912466843501
+MultinomialNB|None|1|1.0|True|True|(1, 2)|False|False|0.5805702917771883
+MultinomialNB|english|1|1.0|False|False|(1, 2)|False|False|0.7110411140583555
+MultinomialNB|english|0.05|0.5|False|False|(1, 2)|False|False|0.4930371352785146
+MultinomialNB|english|0.05|0.7|False|False|(1, 2)|False|False|0.4930371352785146
+MultinomialNB|english|1|1.0|True|False|(1, 2)|False|False|0.6090848806366048
+MultinomialNB|english|1|1.0|True|True|(1, 2)|False|False|0.6052718832891246
+LogisticRegression|None|1|1.0|False|False|(1, 1)|False|False|0.7891246684350133
+LogisticRegression|None|0.05|0.5|False|False|(1, 1)|False|False|0.5203912466843501
+LogisticRegression|None|0.05|0.7|False|False|(1, 1)|False|False|0.5266909814323607
+LogisticRegression|None|0.1|0.8|False|False|(1, 1)|False|False|0.5207228116710876
+LogisticRegression|None|1|1.0|True|False|(1, 1)|False|False|0.7770225464190982
+LogisticRegression|None|1|1.0|True|True|(1, 1)|False|False|0.7851458885941645
+LogisticRegression|english|1|1.0|False|False|(1, 1)|False|False|0.7637599469496021
+LogisticRegression|english|0.05|0.5|False|False|(1, 1)|False|False|0.4961870026525199
+LogisticRegression|english|0.05|0.7|False|False|(1, 1)|False|False|0.4961870026525199
+LogisticRegression|english|1|1.0|True|False|(1, 1)|False|False|0.7519893899204244
+LogisticRegression|english|1|1.0|True|True|(1, 1)|False|False|0.7630968169761273
+LogisticRegression|None|1|1.0|False|False|(1, 2)|False|False|0.8027188328912467
+LogisticRegression|None|0.05|0.5|False|False|(1, 2)|False|False|0.5256962864721485
+LogisticRegression|None|0.05|0.7|False|False|(1, 2)|False|False|0.5288461538461539
+LogisticRegression|None|0.1|0.8|False|False|(1, 2)|False|False|0.5230437665782494
+LogisticRegression|None|1|1.0|True|False|(1, 2)|False|False|0.7786803713527851
+LogisticRegression|None|1|1.0|True|True|(1, 2)|False|False|0.7818302387267905
+LogisticRegression|english|1|1.0|False|False|(1, 2)|False|False|0.7705570291777188
+LogisticRegression|english|0.05|0.5|False|False|(1, 2)|False|False|0.4961870026525199
+LogisticRegression|english|0.05|0.7|False|False|(1, 2)|False|False|0.4961870026525199
+LogisticRegression|english|1|1.0|True|False|(1, 2)|False|False|0.7571286472148541
+LogisticRegression|english|1|1.0|True|True|(1, 2)|False|False|0.7629310344827587
+SGD |None|1|1.0|False|False|(1, 1)|False|False|0.7917771883289124
+SGD |None|0.05|0.5|False|False|(1, 1)|False|False|0.5106100795755968
+SGD |None|0.05|0.7|False|False|(1, 1)|False|False|0.5107758620689655
+SGD |None|0.1|0.8|False|False|(1, 1)|False|False|0.5101127320954907
+SGD |None|1|1.0|True|False|(1, 1)|False|False|0.7788461538461539
+SGD |None|1|1.0|True|True|(1, 1)|False|False|0.7828249336870027
+SGD |english|1|1.0|False|False|(1, 1)|False|False|0.7688992042440318
+SGD |english|0.05|0.5|False|False|(1, 1)|False|False|0.4960212201591512
+SGD |english|0.05|0.7|False|False|(1, 1)|False|False|0.49353448275862066
+SGD |english|1|1.0|True|False|(1, 1)|False|False|0.7606100795755968
+SGD |english|1|1.0|True|True|(1, 1)|False|False|0.7660809018567639
+SGD |None|1|1.0|False|False|(1, 2)|False|False|0.8012267904509284
+SGD |None|0.05|0.5|False|False|(1, 2)|False|False|0.5099469496021221
+SGD |None|0.05|0.7|False|False|(1, 2)|False|False|0.5130968169761273
+SGD |None|0.1|0.8|False|False|(1, 2)|False|False|0.5125994694960212
+SGD |None|1|1.0|True|False|(1, 2)|False|False|0.7936007957559682
+SGD |None|1|1.0|True|True|(1, 2)|False|False|0.797579575596817
+SGD |english|1|1.0|False|False|(1, 2)|False|False|0.771054376657825
+SGD |english|0.05|0.5|False|False|(1, 2)|False|False|0.4970159151193634
+SGD |english|0.05|0.7|False|False|(1, 2)|False|False|0.47828249336870027
+SGD |english|1|1.0|True|False|(1, 2)|False|False|0.7693965517241379
+SGD |english|1|1.0|True|True|(1, 2)|False|False|0.7725464190981433
+LinearSVC |None|1|1.0|False|False|(1, 1)|False|False|0.7630968169761273
+LinearSVC |None|0.05|0.5|False|False|(1, 1)|False|False|0.519893899204244
+LinearSVC |None|0.05|0.7|False|False|(1, 1)|False|False|0.5235411140583555
+LinearSVC |None|0.11|0.8|False|False|(1, 1)|False|False|0.5169098143236074
+LinearSVC |None|1|1.0|True|False|(1, 1)|False|False|0.7780172413793104
+LinearSVC |None|1|1.0|True|True|(1, 1)|False|False|0.7854774535809018
+LinearSVC |english|1|1.0|False|False|(1, 1)|False|False|0.7387267904509284
+LinearSVC |english|0.05|0.5|False|False|(1, 1)|False|False|0.4963527851458886
+LinearSVC |english|0.05|0.7|False|False|(1, 1)|False|False|0.4963527851458886
+LinearSVC |english|1|1.0|True|False|(1, 1)|False|False|0.7443633952254642
+LinearSVC |english|1|1.0|True|True|(1, 1)|False|False|0.7562997347480106
+LinearSVC |None|1|1.0|False|False|(1, 2)|False|False|0.7942639257294429
+LinearSVC |None|0.05|0.5|False|False|(1, 2)|False|False|0.5207228116710876
+LinearSVC |None|0.05|0.7|False|False|(1, 2)|False|False|0.5255305039787799
+LinearSVC |None|0.11|0.8|False|False|(1, 2)|False|False|0.5180702917771883
+LinearSVC |None|1|1.0|True|False|(1, 2)|False|False|0.8081896551724138
+LinearSVC |None|1|1.0|True|True|(1, 2)|False|False|0.8088527851458885
+LinearSVC |english|1|1.0|False|False|(1, 2)|False|False|0.7562997347480106
+LinearSVC |english|0.05|0.5|False|False|(1, 2)|False|False|0.4963527851458886
+LinearSVC |english|0.05|0.7|False|False|(1, 2)|False|False|0.4963527851458886
+LinearSVC |english|1|1.0|True|False|(1, 2)|False|False|0.7644230769230769
+LinearSVC |english|1|1.0|True|True|(1, 2)|False|False|0.7688992042440318
+SVC|None|1|1.0|False|False|(1, 1)|False|False|0.7539787798408488
+SVC|None|0.05|0.5|False|False|(1, 1)|False|False|0.4943633952254642
+SVC|None|0.05|0.7|False|False|(1, 1)|False|False|0.4943633952254642
+SVC|None|0.1|0.8|False|False|(1, 1)|False|False|0.4943633952254642
+SVC|None|1|1.0|True|False|(1, 1)|False|False|0.583554376657825
+SVC|None|1|1.0|True|True|(1, 1)|False|False|0.5925066312997348
+SVC|english|1|1.0|False|False|(1, 1)|False|False|0.7261273209549072
+SVC|english|0.05|0.5|False|False|(1, 1)|False|False|0.4943633952254642
+SVC|english|0.05|0.7|False|False|(1, 1)|False|False|0.4943633952254642
+SVC|english|1|1.0|True|False|(1, 1)|False|False|0.603448275862069
+SVC|english|1|1.0|True|True|(1, 1)|False|False|0.615550397877984
+SVC|None|1|1.0|False|False|(1, 2)|False|False|0.7897877984084881
+SVC|None|0.05|0.5|False|False|(1, 2)|False|False|0.5062997347480106
+SVC|None|0.05|0.7|False|False|(1, 2)|False|False|0.5072944297082228
+SVC|None|0.1|0.8|False|False|(1, 2)|False|False|0.5069628647214854
+SVC|None|1|1.0|True|False|(1, 2)|False|False|0.5029840848806366
+SVC|None|1|1.0|True|True|(1, 2)|False|False|0.4941976127320955
+SVC|english|1|1.0|False|False|(1, 2)|False|False|0.7403846153846154
+SVC|english|0.05|0.5|False|False|(1, 2)|False|False|0.4943633952254642
+SVC|english|0.05|0.7|False|False|(1, 2)|False|False|0.4943633952254642
+SVC|english|1|1.0|True|False|(1, 2)|False|False|0.5338196286472149
+SVC|english|1|1.0|True|True|(1, 2)|False|False|0.5172413793103449
+SVC|None|1|1.0|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|0.05|0.5|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|0.05|0.7|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|0.1|0.8|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|True|(1, 1)|False|False|0.4925397877984085
+SVC|english|1|1.0|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|english|0.05|0.5|False|False|(1, 1)|False|False|0.4932029177718833
+SVC|english|0.05|0.7|False|False|(1, 1)|False|False|0.4932029177718833
+SVC|english|1|1.0|True|False|(1, 1)|False|False|0.4925397877984085
+SVC|english|1|1.0|True|True|(1, 1)|False|False|0.4925397877984085
+SVC|None|1|1.0|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|0.05|0.5|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|0.05|0.7|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|0.1|0.8|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|True|(1, 2)|False|False|0.4925397877984085
+SVC|english|1|1.0|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|english|0.05|0.5|False|False|(1, 2)|False|False|0.4932029177718833
+SVC|english|0.05|0.7|False|False|(1, 2)|False|False|0.4932029177718833
+SVC|english|1|1.0|True|False|(1, 2)|False|False|0.4925397877984085
+SVC|english|1|1.0|True|True|(1, 2)|False|False|0.4925397877984085
 LinearSVC |None|1|1.0|True|False|(1, 2)|True|True|0.8453249336870027
 LinearSVC |None|1|1.0|True|True|(1, 2)|True|True|0.8499668435013262
+LogisticRegression|None|1|1.0|False|False|(1, 2)|True|True|0.8376989389920424
+LogisticRegression|None|1|1.0|False|False|(1, 1)|True|True|0.8252652519893899
+SGD |None|1|1.0|False|False|(1, 2)|True|True|0.8391909814323607
+SGD |None|1|1.0|True|True|(1, 2)|True|True|0.835709549071618

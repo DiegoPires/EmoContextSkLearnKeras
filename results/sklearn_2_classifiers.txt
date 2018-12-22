@@ -1,3 +1,139 @@
 Classifier|stop_words|min_df|max_df|use_tfid|binary|ngram_range|emoji|sentiment|Accuracy
+MultinomialNB|None|1|1.0|False|False|(1, 1)|False|False|0.7347480106100795
+MultinomialNB|None|0.05|0.5|False|False|(1, 1)|False|False|0.508289124668435
+MultinomialNB|None|0.05|0.7|False|False|(1, 1)|False|False|0.508289124668435
+MultinomialNB|None|0.1|0.8|False|False|(1, 1)|False|False|0.49502652519893897
+MultinomialNB|None|1|1.0|True|False|(1, 1)|False|False|0.6339522546419099
+MultinomialNB|None|1|1.0|True|True|(1, 1)|False|False|0.6301392572944297
+MultinomialNB|english|1|1.0|False|False|(1, 1)|False|False|0.7236405835543767
+MultinomialNB|english|0.05|0.5|False|False|(1, 1)|False|False|0.4991710875331565
+MultinomialNB|english|0.05|0.7|False|False|(1, 1)|False|False|0.4991710875331565
+MultinomialNB|english|1|1.0|True|False|(1, 1)|False|False|0.6429045092838196
+MultinomialNB|english|1|1.0|True|True|(1, 1)|False|False|0.6409151193633952
+MultinomialNB|None|1|1.0|False|False|(1, 2)|False|False|0.721816976127321
+MultinomialNB|None|0.05|0.5|False|False|(1, 2)|False|False|0.508289124668435
+MultinomialNB|None|0.05|0.7|False|False|(1, 2)|False|False|0.508289124668435
+MultinomialNB|None|0.1|0.8|False|False|(1, 2)|False|False|0.49502652519893897
+MultinomialNB|None|1|1.0|True|False|(1, 2)|False|False|0.603448275862069
+MultinomialNB|None|1|1.0|True|True|(1, 2)|False|False|0.6012931034482759
+MultinomialNB|english|1|1.0|False|False|(1, 2)|False|False|0.7103779840848806
+MultinomialNB|english|0.05|0.5|False|False|(1, 2)|False|False|0.4991710875331565
+MultinomialNB|english|0.05|0.7|False|False|(1, 2)|False|False|0.4991710875331565
+MultinomialNB|english|1|1.0|True|False|(1, 2)|False|False|0.6109084880636605
+MultinomialNB|english|1|1.0|True|True|(1, 2)|False|False|0.6090848806366048
+LogisticRegression|None|1|1.0|False|False|(1, 1)|False|False|0.7743700265251989
+LogisticRegression|None|0.05|0.5|False|False|(1, 1)|False|False|0.514920424403183
+LogisticRegression|None|0.05|0.7|False|False|(1, 1)|False|False|0.514920424403183
+LogisticRegression|None|0.1|0.8|False|False|(1, 1)|False|False|0.5041445623342176
+LogisticRegression|None|1|1.0|True|False|(1, 1)|False|False|0.7655835543766578
+LogisticRegression|None|1|1.0|True|True|(1, 1)|False|False|0.7738726790450928
+LogisticRegression|english|1|1.0|False|False|(1, 1)|False|False|0.7541445623342176
+LogisticRegression|english|0.05|0.5|False|False|(1, 1)|False|False|0.5058023872679045
+LogisticRegression|english|0.05|0.7|False|False|(1, 1)|False|False|0.5058023872679045
+LogisticRegression|english|1|1.0|True|False|(1, 1)|False|False|0.7478448275862069
+LogisticRegression|english|1|1.0|True|True|(1, 1)|False|False|0.754973474801061
+LogisticRegression|None|1|1.0|False|False|(1, 2)|False|False|0.7911140583554377
+LogisticRegression|None|0.05|0.5|False|False|(1, 2)|False|False|0.514920424403183
+LogisticRegression|None|0.05|0.7|False|False|(1, 2)|False|False|0.514920424403183
+LogisticRegression|None|0.1|0.8|False|False|(1, 2)|False|False|0.5041445623342176
+LogisticRegression|None|1|1.0|True|False|(1, 2)|False|False|0.776027851458886
+LogisticRegression|None|1|1.0|True|True|(1, 2)|False|False|0.7806697612732095
+LogisticRegression|english|1|1.0|False|False|(1, 2)|False|False|0.7634283819628647
+LogisticRegression|english|0.05|0.5|False|False|(1, 2)|False|False|0.5058023872679045
+LogisticRegression|english|0.05|0.7|False|False|(1, 2)|False|False|0.5058023872679045
+LogisticRegression|english|1|1.0|True|False|(1, 2)|False|False|0.7486737400530504
+LogisticRegression|english|1|1.0|True|True|(1, 2)|False|False|0.7539787798408488
+SGD |None|1|1.0|False|False|(1, 1)|False|False|0.7768567639257294
+SGD |None|0.05|0.5|False|False|(1, 1)|False|False|0.504973474801061
+SGD |None|0.05|0.7|False|False|(1, 1)|False|False|0.5048076923076923
+SGD |None|0.1|0.8|False|False|(1, 1)|False|False|0.48458222811671087
+SGD |None|1|1.0|True|False|(1, 1)|False|False|0.7654177718832891
+SGD |None|1|1.0|True|True|(1, 1)|False|False|0.7662466843501327
+SGD |english|1|1.0|False|False|(1, 1)|False|False|0.7579575596816976
+SGD |english|0.05|0.5|False|False|(1, 1)|False|False|0.4976790450928382
+SGD |english|0.05|0.7|False|False|(1, 1)|False|False|0.5039787798408488
+SGD |english|1|1.0|True|False|(1, 1)|False|False|0.7513262599469496
+SGD |english|1|1.0|True|True|(1, 1)|False|False|0.7539787798408488
+SGD |None|1|1.0|False|False|(1, 2)|False|False|0.7911140583554377
+SGD |None|0.05|0.5|False|False|(1, 2)|False|False|0.5023209549071618
+SGD |None|0.05|0.7|False|False|(1, 2)|False|False|0.5084549071618037
+SGD |None|0.1|0.8|False|False|(1, 2)|False|False|0.4880636604774536
+SGD |None|1|1.0|True|False|(1, 2)|False|False|0.7841511936339522
+SGD |None|1|1.0|True|True|(1, 2)|False|False|0.7866379310344828
+SGD |english|1|1.0|False|False|(1, 2)|False|False|0.7655835543766578
+SGD |english|0.05|0.5|False|False|(1, 2)|False|False|0.47894562334217505
+SGD |english|0.05|0.7|False|False|(1, 2)|False|False|0.4996684350132626
+SGD |english|1|1.0|True|False|(1, 2)|False|False|0.7607758620689655
+SGD |english|1|1.0|True|True|(1, 2)|False|False|0.7609416445623343
+LinearSVC |None|1|1.0|False|False|(1, 1)|False|False|0.7513262599469496
+LinearSVC |None|0.05|0.5|False|False|(1, 1)|False|False|0.5147546419098143
+LinearSVC |None|0.05|0.7|False|False|(1, 1)|False|False|0.5147546419098143
+LinearSVC |None|0.11|0.8|False|False|(1, 1)|False|False|0.501657824933687
+LinearSVC |None|1|1.0|True|False|(1, 1)|False|False|0.7617705570291777
+LinearSVC |None|1|1.0|True|True|(1, 1)|False|False|0.7693965517241379
+LinearSVC |english|1|1.0|False|False|(1, 1)|False|False|0.7345822281167109
+LinearSVC |english|0.05|0.5|False|False|(1, 1)|False|False|0.506631299734748
+LinearSVC |english|0.05|0.7|False|False|(1, 1)|False|False|0.506631299734748
+LinearSVC |english|1|1.0|True|False|(1, 1)|False|False|0.7390583554376657
+LinearSVC |english|1|1.0|True|True|(1, 1)|False|False|0.7428713527851459
+LinearSVC |None|1|1.0|False|False|(1, 2)|False|False|0.7791777188328912
+LinearSVC |None|0.05|0.5|False|False|(1, 2)|False|False|0.5147546419098143
+LinearSVC |None|0.05|0.7|False|False|(1, 2)|False|False|0.5147546419098143
+LinearSVC |None|0.11|0.8|False|False|(1, 2)|False|False|0.501657824933687
+LinearSVC |None|1|1.0|True|False|(1, 2)|False|False|0.7894562334217506
+LinearSVC |None|1|1.0|True|True|(1, 2)|False|False|0.790948275862069
+LinearSVC |english|1|1.0|False|False|(1, 2)|False|False|0.7501657824933687
+LinearSVC |english|0.05|0.5|False|False|(1, 2)|False|False|0.506631299734748
+LinearSVC |english|0.05|0.7|False|False|(1, 2)|False|False|0.506631299734748
+LinearSVC |english|1|1.0|True|False|(1, 2)|False|False|0.7577917771883289
+LinearSVC |english|1|1.0|True|True|(1, 2)|False|False|0.7625994694960212
+SVC|None|1|1.0|False|False|(1, 1)|False|False|0.7357427055702918
+SVC|None|0.05|0.5|False|False|(1, 1)|False|False|0.5062997347480106
+SVC|None|0.05|0.7|False|False|(1, 1)|False|False|0.5062997347480106
+SVC|None|0.1|0.8|False|False|(1, 1)|False|False|0.49452917771883287
+SVC|None|1|1.0|True|False|(1, 1)|False|False|0.6077586206896551
+SVC|None|1|1.0|True|True|(1, 1)|False|False|0.616710875331565
+SVC|english|1|1.0|False|False|(1, 1)|False|False|0.7209880636604774
+SVC|english|0.05|0.5|False|False|(1, 1)|False|False|0.5034814323607427
+SVC|english|0.05|0.7|False|False|(1, 1)|False|False|0.5034814323607427
+SVC|english|1|1.0|True|False|(1, 1)|False|False|0.6157161803713528
+SVC|english|1|1.0|True|True|(1, 1)|False|False|0.6253315649867374
+SVC|None|1|1.0|False|False|(1, 2)|False|False|0.7644230769230769
+SVC|None|0.05|0.5|False|False|(1, 2)|False|False|0.5062997347480106
+SVC|None|0.05|0.7|False|False|(1, 2)|False|False|0.5062997347480106
+SVC|None|0.1|0.8|False|False|(1, 2)|False|False|0.49452917771883287
+SVC|None|1|1.0|True|False|(1, 2)|False|False|0.5202254641909815
+SVC|None|1|1.0|True|True|(1, 2)|False|False|0.5024867374005305
+SVC|english|1|1.0|False|False|(1, 2)|False|False|0.7319297082228117
+SVC|english|0.05|0.5|False|False|(1, 2)|False|False|0.5034814323607427
+SVC|english|0.05|0.7|False|False|(1, 2)|False|False|0.5034814323607427
+SVC|english|1|1.0|True|False|(1, 2)|False|False|0.5412798408488063
+SVC|english|1|1.0|True|True|(1, 2)|False|False|0.5235411140583555
+SVC|None|1|1.0|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|0.05|0.5|False|False|(1, 1)|False|False|0.4930371352785146
+SVC|None|0.05|0.7|False|False|(1, 1)|False|False|0.4930371352785146
+SVC|None|0.1|0.8|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|False|(1, 1)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|True|(1, 1)|False|False|0.4925397877984085
+SVC|english|1|1.0|False|False|(1, 1)|False|False|0.4925397877984085
+SVC|english|0.05|0.5|False|False|(1, 1)|False|False|0.5021551724137931
+SVC|english|0.05|0.7|False|False|(1, 1)|False|False|0.5021551724137931
+SVC|english|1|1.0|True|False|(1, 1)|False|False|0.4925397877984085
+SVC|english|1|1.0|True|True|(1, 1)|False|False|0.4925397877984085
+SVC|None|1|1.0|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|0.05|0.5|False|False|(1, 2)|False|False|0.4930371352785146
+SVC|None|0.05|0.7|False|False|(1, 2)|False|False|0.4930371352785146
+SVC|None|0.1|0.8|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|False|(1, 2)|False|False|0.4925397877984085
+SVC|None|1|1.0|True|True|(1, 2)|False|False|0.4925397877984085
+SVC|english|1|1.0|False|False|(1, 2)|False|False|0.4925397877984085
+SVC|english|0.05|0.5|False|False|(1, 2)|False|False|0.5021551724137931
+SVC|english|0.05|0.7|False|False|(1, 2)|False|False|0.5021551724137931
+SVC|english|1|1.0|True|False|(1, 2)|False|False|0.4925397877984085
+SVC|english|1|1.0|True|True|(1, 2)|False|False|0.4925397877984085
 LinearSVC |None|1|1.0|True|False|(1, 2)|True|True|0.8270888594164456
 LinearSVC |None|1|1.0|True|True|(1, 2)|True|True|0.8292440318302388
+LogisticRegression|None|1|1.0|False|False|(1, 2)|True|True|0.8244363395225465
+LogisticRegression|None|1|1.0|False|False|(1, 1)|True|True|0.8080238726790451
+SGD |None|1|1.0|False|False|(1, 2)|True|True|0.8299071618037135
+SGD |None|1|1.0|True|True|(1, 2)|True|True|0.8294098143236074
