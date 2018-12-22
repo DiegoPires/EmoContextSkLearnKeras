@@ -37,18 +37,18 @@ Full results can be seen on the `\results` folder of this project.
 
 For SkLearn, here's the 10 best based on the training data
 
-| Classifier |stop_words | min_f | max_f | use_tfid | binary  | ngram  | emoji | sentiment | dto  | Accuracy      |
-|------------|-----------|-------|-------|----------|---------|--------|-------|-----------|------|---------------|
-| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.850464191* |	
-| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto4 | *0.849966844* |	
-| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto1 | *0.848972149* |	
-| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.845656499* |	
-| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto4 | *0.845324934* |	
-| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto1 | *0.844330239* |	
-| SGD        |	None	 | 1 	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto1 | *0.842175066* |	
-| SGD 	     |  None	 | 1	 | 1	 | FALSE  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.840351459* |	
-| SGD 	     |  None	 | 1	 | 1	 | FALSE  | FALSE	| (1, 2) | TRUE	 | TRUE	    | dto4 | *0.840185676* |	
-| SGD 	     |  None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	    | dto3 | *0.838527851* |	
+| Classifier |stop_words | min_f | max_f | use_tfid | binary  | ngram  | emoji | senti | dto  | Accuracy      |
+|------------|-----------|-------|-------|----------|---------|--------|-------|-------|------|---------------|
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	| dto3 | *0.850464191* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	| dto4 | *0.849966844* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	| dto1 | *0.848972149* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	| dto3 | *0.845656499* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	| dto4 | *0.845324934* |	
+| LinearSVC  |	None	 | 1	 | 1	 | TRUE	  | FALSE	| (1, 2) | TRUE	 | TRUE	| dto1 | *0.844330239* |	
+| SGD        |	None	 | 1 	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	| dto1 | *0.842175066* |	
+| SGD 	     |  None	 | 1	 | 1	 | FALSE  | FALSE	| (1, 2) | TRUE	 | TRUE	| dto3 | *0.840351459* |	
+| SGD 	     |  None	 | 1	 | 1	 | FALSE  | FALSE	| (1, 2) | TRUE	 | TRUE	| dto4 | *0.840185676* |	
+| SGD 	     |  None	 | 1	 | 1	 | TRUE	  | TRUE	| (1, 2) | TRUE	 | TRUE	| dto3 | *0.838527851* |	
 
 For Keras:
 
