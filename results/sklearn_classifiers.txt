@@ -43,28 +43,28 @@ LogisticRegression|english|0.05|0.5|False|False|(1, 2)|False|False|0.49469496021
 LogisticRegression|english|0.05|0.7|False|False|(1, 2)|False|False|0.4946949602122016
 LogisticRegression|english|1|1.0|True|False|(1, 2)|False|False|0.7571286472148541
 LogisticRegression|english|1|1.0|True|True|(1, 2)|False|False|0.7612732095490716
-SGD |None|1|1.0|False|False|(1, 1)|False|False|0.7912798408488063
-SGD |None|0.05|0.5|False|False|(1, 1)|False|False|0.5139257294429708
-SGD |None|0.05|0.7|False|False|(1, 1)|False|False|0.5097811671087533
-SGD |None|0.1|0.8|False|False|(1, 1)|False|False|0.5001657824933687
-SGD |None|1|1.0|True|False|(1, 1)|False|False|0.7776856763925729
-SGD |None|1|1.0|True|True|(1, 1)|False|False|0.781498673740053
+SGD |None|1|1.0|False|False|(1, 1)|False|False|0.7919429708222812
+SGD |None|0.05|0.5|False|False|(1, 1)|False|False|0.5137599469496021
+SGD |None|0.05|0.7|False|False|(1, 1)|False|False|0.5180702917771883
+SGD |None|0.1|0.8|False|False|(1, 1)|False|False|0.5019893899204244
+SGD |None|1|1.0|True|False|(1, 1)|False|False|0.7773541114058355
+SGD |None|1|1.0|True|True|(1, 1)|False|False|0.7816644562334217
 SGD |english|1|1.0|False|False|(1, 1)|False|False|0.7692307692307693
-SGD |english|0.05|0.5|False|False|(1, 1)|False|False|0.4960212201591512
-SGD |english|0.05|0.7|False|False|(1, 1)|False|False|0.4937002652519894
+SGD |english|0.05|0.5|False|False|(1, 1)|False|False|0.49452917771883287
+SGD |english|0.05|0.7|False|False|(1, 1)|False|False|0.48192970822281167
 SGD |english|1|1.0|True|False|(1, 1)|False|False|0.7611074270557029
 SGD |english|1|1.0|True|True|(1, 1)|False|False|0.7647546419098143
-SGD |None|1|1.0|False|False|(1, 2)|False|False|0.7982427055702918
-SGD |None|0.05|0.5|False|False|(1, 2)|False|False|0.5092838196286472
-SGD |None|0.05|0.7|False|False|(1, 2)|False|False|0.5129310344827587
-SGD |None|0.1|0.8|False|False|(1, 2)|False|False|0.49452917771883287
+SGD |None|1|1.0|False|False|(1, 2)|False|False|0.7980769230769231
+SGD |None|0.05|0.5|False|False|(1, 2)|False|False|0.5129310344827587
+SGD |None|0.05|0.7|False|False|(1, 2)|False|False|0.5077917771883289
+SGD |None|0.1|0.8|False|False|(1, 2)|False|False|0.5011604774535809
 SGD |None|1|1.0|True|False|(1, 2)|False|False|0.7934350132625995
 SGD |None|1|1.0|True|True|(1, 2)|False|False|0.7977453580901857
 SGD |english|1|1.0|False|False|(1, 2)|False|False|0.7703912466843501
-SGD |english|0.05|0.5|False|False|(1, 2)|False|False|0.49187665782493367
-SGD |english|0.05|0.7|False|False|(1, 2)|False|False|0.48624005305039786
+SGD |english|0.05|0.5|False|False|(1, 2)|False|False|0.4925397877984085
+SGD |english|0.05|0.7|False|False|(1, 2)|False|False|0.49353448275862066
 SGD |english|1|1.0|True|False|(1, 2)|False|False|0.7692307692307693
-SGD |english|1|1.0|True|True|(1, 2)|False|False|0.7717175066312998
+SGD |english|1|1.0|True|True|(1, 2)|False|False|0.771551724137931
 LinearSVC |None|1|1.0|False|False|(1, 1)|False|False|0.763262599469496
 LinearSVC |None|0.05|0.5|False|False|(1, 1)|False|False|0.5207228116710876
 LinearSVC |None|0.05|0.7|False|False|(1, 1)|False|False|0.5207228116710876
@@ -136,4 +136,4 @@ LinearSVC |None|1|1.0|True|True|(1, 2)|True|True|0.848972148541114
 LogisticRegression|None|1|1.0|False|False|(1, 2)|True|True|0.838527851458886
 LogisticRegression|None|1|1.0|False|False|(1, 1)|True|True|0.8232758620689655
 SGD |None|1|1.0|False|False|(1, 2)|True|True|0.8350464190981433
-SGD |None|1|1.0|True|True|(1, 2)|True|True|0.8380305039787799
+SGD |None|1|1.0|True|True|(1, 2)|True|True|0.8391909814323607

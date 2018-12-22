@@ -257,7 +257,7 @@ def test_with_sklearn_classifiers(data_dto, pre_traitement_dto, name='sklearn', 
     return predict_with_best(results, name + '_prediction.txt', data_dto.data_to_predict)
 
 # Train multiple keras classifiers differents, takes the best one and predict the texts without label
-def test_with_keras_classifier(data_dto, verbose=False, remove_models=False):
+def test_with_keras_classifier(data_dto, verbose=False, remove_models=False, name_append=''):
     
     start_time = time.time()
 
@@ -267,29 +267,29 @@ def test_with_keras_classifier(data_dto, verbose=False, remove_models=False):
     # declaration of our tests
     results = []
     classifier_test = [
-        KerasClassifierTestSet(name='simple', creation_method=get_simple_keras_classifier, data_dto=data_dto, extra_param=None, verbose=verbose),
-        KerasClassifierTestSet(name='denser', creation_method=get_denser_keras_classifier, data_dto=data_dto, extra_param=None, verbose=verbose),
+        KerasClassifierTestSet(name='simple' + name_append, creation_method=get_simple_keras_classifier, data_dto=data_dto, extra_param=None, verbose=verbose),
+        KerasClassifierTestSet(name='denser' + name_append, creation_method=get_denser_keras_classifier, data_dto=data_dto, extra_param=None, verbose=verbose),
 
-        KerasClassifierTestSet(name='denser_and_tokenizer_binary', creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'binary'), verbose=verbose),
-        KerasClassifierTestSet(name='denser_and_tokenizer_count', creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'count'), verbose=verbose),
-        KerasClassifierTestSet(name='denser_and_tokenizer_tfidf', creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'tfidf'), verbose=verbose),
-        KerasClassifierTestSet(name='denser_and_tokenizer_freq', creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'freq'), verbose=verbose),
+        KerasClassifierTestSet(name='denser_and_tokenizer_binary' + name_append, creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'binary'), verbose=verbose),
+        KerasClassifierTestSet(name='denser_and_tokenizer_count' + name_append, creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'count'), verbose=verbose),
+        KerasClassifierTestSet(name='denser_and_tokenizer_tfidf' + name_append, creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'tfidf'), verbose=verbose),
+        KerasClassifierTestSet(name='denser_and_tokenizer_freq' + name_append, creation_method=get_denser_keras_classifier_with_tokenizer, data_dto=data_dto, extra_param=KerasTokenizerDTO(None, True, ' ', False, 'freq'), verbose=verbose),
 
-        KerasClassifierTestSet(name='word2vec', creation_method=get_keras_with_word2vec_denser, data_dto=data_dto, extra_param=None, verbose=verbose),
-        KerasClassifierTestSet(name='word2vec_denser', creation_method=get_keras_with_word2vec_denser, data_dto=data_dto, extra_param=None, verbose=verbose),
+        KerasClassifierTestSet(name='word2vec' + name_append, creation_method=get_keras_with_word2vec_denser, data_dto=data_dto, extra_param=None, verbose=verbose),
+        KerasClassifierTestSet(name='word2vec_denser' + name_append, creation_method=get_keras_with_word2vec_denser, data_dto=data_dto, extra_param=None, verbose=verbose),
     ]
 
     # execution of the tests
     print("\nEvaluating Keras classifiers\n")
     for test in tqdm(classifier_test):
         classifier = test.execute()
-        write_classifier_result_to_file('keras_classifiers.txt', classifier)
+        write_classifier_result_to_file('keras_classifiers'  + name_append + '.txt', classifier)
         results.append(classifier)
 
-    print("\n{}# {:.2f} seconds to do keras {}".format(bcolors.WARNING, (time.time() - start_time), bcolors.ENDC))
+    print("\n{}# {:.2f} seconds to do keras{} {}".format(bcolors.WARNING, (time.time() - start_time), name_append, bcolors.ENDC))
 
     # prediction with the best classifier
-    return predict_with_best(results, 'keras_prediction.txt', data_dto.data_to_predict)
+    return predict_with_best(results, 'keras_prediction'  + name_append + '.txt', data_dto.data_to_predict)
 
 # Finds the best classifier and use it to predict the texts
 def predict_with_best(results, file_results_name, data_to_predict):
@@ -367,30 +367,39 @@ def classify(verbose=False, remove_saved_keras_models=False):
 
     # First SkLearn without pre text treatment    
     pre_traitement_dto = PreTraitementDTO(apply_phrase_separation=True, replace_keywords=False, remove_punctuation=False, apply_lemm=False, filter_open_words=False)
-    data_dto = get_data(pre_traitement_dto)
-    sk_predictions_1 = test_with_sklearn_classifiers(data_dto, pre_traitement_dto, name='sklearn', execute_quantity=execute_quantity, verbose=verbose)
+    data_dto_1 = get_data(pre_traitement_dto)
+    sk_predictions_1 = test_with_sklearn_classifiers(data_dto_1, pre_traitement_dto, name='sklearn', execute_quantity=execute_quantity, verbose=verbose)
     
     # Second SkLearn with all pre text treatment
     pre_traitement_dto = PreTraitementDTO(apply_phrase_separation=False, replace_keywords=True, remove_punctuation=True, apply_lemm=True, filter_open_words=True)
-    data_dto = get_data(pre_traitement_dto)
-    sk_predictions_2 = test_with_sklearn_classifiers(data_dto, pre_traitement_dto, name='sklearn_2', execute_quantity=execute_quantity, verbose=verbose)
+    data_dto_2 = get_data(pre_traitement_dto)
+    sk_predictions_2 = test_with_sklearn_classifiers(data_dto_2, pre_traitement_dto, name='sklearn_2', execute_quantity=execute_quantity, verbose=verbose)
 
     ### THIS ONE IS THE BETTER ## Third SkLearn with separation, replacing words and remove punct pre text treatment 
     pre_traitement_dto = PreTraitementDTO(apply_phrase_separation=True, replace_keywords=True, remove_punctuation=True, apply_lemm=False, filter_open_words=False)
-    data_dto = get_data(pre_traitement_dto)
-    sk_predictions_3 = test_with_sklearn_classifiers(data_dto, pre_traitement_dto, name='sklearn_3', execute_quantity=execute_quantity, verbose=verbose)
+    data_dto_3 = get_data(pre_traitement_dto)
+    sk_predictions_3 = test_with_sklearn_classifiers(data_dto_3, pre_traitement_dto, name='sklearn_3', execute_quantity=execute_quantity, verbose=verbose)
 
     # Fourth SkLearn with replacing words and remove punct pre text treatment
     pre_traitement_dto = PreTraitementDTO(apply_phrase_separation=False, replace_keywords=True, remove_punctuation=True, apply_lemm=False, filter_open_words=False)
-    data_dto = get_data(pre_traitement_dto)
-    sk_predictions_4 = test_with_sklearn_classifiers(data_dto, pre_traitement_dto, name='sklearn_4', execute_quantity=execute_quantity, verbose=verbose)
+    data_dto_4 = get_data(pre_traitement_dto)
+    sk_predictions_4 = test_with_sklearn_classifiers(data_dto_4, pre_traitement_dto, name='sklearn_4', execute_quantity=execute_quantity, verbose=verbose)
 
     # Do all keras work related
-    ke_predictions = test_with_keras_classifier(data_dto, verbose, remove_saved_keras_models)
+    ke_predictions_1 = test_with_keras_classifier(data_dto_1, verbose, remove_saved_keras_models)
 
-    print("\n{}# {:.2f} seconds to do it all {}".format(bcolors.WARNING, (time.time() - start_time), bcolors.ENDC))
+    ke_predictions_2 = test_with_keras_classifier(data_dto_2, verbose, remove_saved_keras_models, name_append='_dto2')
+
+    ke_predictions_3 = test_with_keras_classifier(data_dto_3, verbose, remove_saved_keras_models, name_append='_dto3')
+
+    ke_predictions_4 = test_with_keras_classifier(data_dto_4, verbose, remove_saved_keras_models, name_append='_dto4')
+
+    print("\n{}### {:.2f} seconds to do it all {}".format(bcolors.WARNING, (time.time() - start_time), bcolors.ENDC))
     
-    compare_classifiers_results(sk_predictions_3, ke_predictions)
+    compare_classifiers_results(sk_predictions_1, ke_predictions_1)
+    compare_classifiers_results(sk_predictions_2, ke_predictions_2)
+    compare_classifiers_results(sk_predictions_3, ke_predictions_3)
+    compare_classifiers_results(sk_predictions_4, ke_predictions_4)
 
 if __name__ == '__main__':
     analyse_text()  # Build some graphs analysing the data we have for training

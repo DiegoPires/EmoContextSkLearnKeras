@@ -1,0 +1,9 @@
+Classifier|stop_words|min_df|max_df|use_tfid|binary|ngram_range|emoji|sentiment|Accuracy
+simple_dto3|0.6816976127320955
+denser_dto3|0.767738726790451
+denser_and_tokenizer_binary_dto3|0.7937665782493368
+denser_and_tokenizer_count_dto3|0.7939323607427056
+denser_and_tokenizer_tfidf_dto3|0.7841511936339522
+denser_and_tokenizer_freq_dto3|0.7795092838196287
+word2vec_dto3|0.8263428381962865
+word2vec_denser_dto3|0.8157327586206896
