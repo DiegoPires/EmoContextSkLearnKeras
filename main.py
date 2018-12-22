@@ -48,7 +48,7 @@ def get_data(pre_traitement_dto):
 def get_predict_data(pre_traitement_dto):
     df = load_and_treat_data([1,2,3], pre_traitement_dto)
     values = df["text"].values
-    return np.ndenumerate(values) # returns an enumerate to facilitate for
+    return values # np.ndenumerate( returns an enumerate to facilitate for
 
 def load_and_treat_data(columns_to_load, pre_traitement_dto):
     # Read our train data from file
@@ -257,7 +257,7 @@ def test_with_sklearn_classifiers(data_dto, pre_traitement_dto, name='sklearn', 
     return predict_with_best(results, name + '_prediction.txt', data_dto.data_to_predict)
 
 # Train multiple keras classifiers differents, takes the best one and predict the texts without label
-def test_with_keras_classifier(data_dto, verbose=False, remove_models=False, name_append=''):
+def test_with_keras_classifier(data_dto, verbose=False, remove_models=False, name_append='', execute_quantity=0):
     
     start_time = time.time()
 
@@ -279,9 +279,14 @@ def test_with_keras_classifier(data_dto, verbose=False, remove_models=False, nam
         KerasClassifierTestSet(name='word2vec_denser' + name_append, creation_method=get_keras_with_word2vec_denser, data_dto=data_dto, extra_param=None, verbose=verbose),
     ]
 
+    if (execute_quantity == 0):
+        classifiers_to_execute = classifier_test
+    else:
+        classifiers_to_execute = classifier_test[:execute_quantity]
+
     # execution of the tests
     print("\nEvaluating Keras classifiers\n")
-    for test in tqdm(classifier_test):
+    for test in tqdm(classifiers_to_execute):
         classifier = test.execute()
         write_classifier_result_to_file('keras_classifiers'  + name_append + '.txt', classifier)
         results.append(classifier)
@@ -310,13 +315,15 @@ def predict_with_best(results, file_results_name, data_to_predict):
     print ("\nPrediction|Sentence")
     
     predictions = []
+    index = 0
     # Predicting all talks with our best classifier and writting to file
-    for index, text in data_to_predict:
+    for text in data_to_predict:
         prediction = best_classifier.predict(text)[0] # 0 to remove from numpy array
         predictions.append(prediction)
     
         write_results_to_file(file_results_name, prediction, text)
-        if (index[0] <= 10):
+        if (index < 10):
+            index = index + 1
             print ("{}{}{}|{}".format(
                 bcolors.WARNING,
                 prediction,
@@ -386,13 +393,13 @@ def classify(verbose=False, remove_saved_keras_models=False):
     sk_predictions_4 = test_with_sklearn_classifiers(data_dto_4, pre_traitement_dto, name='sklearn_4', execute_quantity=execute_quantity, verbose=verbose)
 
     # Do all keras work related
-    ke_predictions_1 = test_with_keras_classifier(data_dto_1, verbose, remove_saved_keras_models)
+    ke_predictions_1 = test_with_keras_classifier(data_dto_1, verbose, remove_saved_keras_models, execute_quantity=execute_quantity)
 
-    ke_predictions_2 = test_with_keras_classifier(data_dto_2, verbose, remove_saved_keras_models, name_append='_dto2')
+    ke_predictions_2 = test_with_keras_classifier(data_dto_2, verbose, remove_saved_keras_models, name_append='_dto2', execute_quantity=execute_quantity)
 
-    ke_predictions_3 = test_with_keras_classifier(data_dto_3, verbose, remove_saved_keras_models, name_append='_dto3')
+    ke_predictions_3 = test_with_keras_classifier(data_dto_3, verbose, remove_saved_keras_models, name_append='_dto3', execute_quantity=execute_quantity)
 
-    ke_predictions_4 = test_with_keras_classifier(data_dto_4, verbose, remove_saved_keras_models, name_append='_dto4')
+    ke_predictions_4 = test_with_keras_classifier(data_dto_4, verbose, remove_saved_keras_models, name_append='_dto4', execute_quantity=execute_quantity)
 
     print("\n{}### {:.2f} seconds to do it all {}".format(bcolors.WARNING, (time.time() - start_time), bcolors.ENDC))
     
