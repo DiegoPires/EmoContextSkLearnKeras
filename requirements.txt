@@ -40,7 +40,7 @@ packaging==18.0
 pandas==0.23.4
 Pillow==5.3.0
 plotly==3.4.2
-protobuf==3.6.1
+protobuf==3.18.3
 pycosat==0.6.3
 pylint==2.2.2
 pyparsing==2.3.0
